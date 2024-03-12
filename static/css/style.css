@@ -1,0 +1,96 @@
+body{
+  background-color: black;
+  
+}
+h2{
+  color:white;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+.featured {
+background-color: #191919;
+padding: 100px;
+}
+.featured h2 {
+text-align: center;
+margin-bottom: 50px;
+}
+.featured ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+}
+.featured li {
+width: 300px;
+margin-right: 20px;
+margin-bottom: 20px;
+border: 1px solid #ccc;
+border-radius: 5px;
+overflow: hidden;
+
+}
+.featured li:hover {
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.featured img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+}
+.featured h3 {
+margin: 10px;
+font-size: 20px;
+color: #fcfcfc;
+}
+.featured p {
+margin: 10px;
+font-size: 16px;
+color: #666;
+}
+.row{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.car-price {
+  margin-top: 10px;
+}
+
+.car-price .amount {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.car-price .currency {
+  font-size: 14px;
+}
+
+.car-price .period {
+  font-size: 14px;
+  margin-left: 5px;
+}
+span{
+  color: whitesmoke;
+}
+.button{
+  display:flex;
+  background-color: #f9004d;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: .4s;
+
+}
+
+.button:hover{
+  background-color: transparent;
+  border: 2px solid #f9004d;
+  cursor: pointer;
+}

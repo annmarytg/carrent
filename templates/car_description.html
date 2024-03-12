@@ -1,0 +1,87 @@
+{% load static %}
+<div class="small-container single-product">
+    <div class="row">
+        <div class="col">
+            <img src="{{ car.image.url }}" width="100%" id="CarImg">
+
+           </div>
+        </div>
+        <div class="col-2">
+            <p>{{car.title}}</p>
+            <h4>Rs.{{car.price}}/day</h4>
+           </div>
+            <form method="post" action="{% url 'add_to_cart' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="hidden" value="{{ car.id }}" name="car_id"/>
+                <input type="number" name="days" value="1">
+                <button type="submit" class="button">Book now</button>
+            </form>
+            <br>
+            <div class="cardetails">
+            <h3>Car Details <i class="fa fa-indent"></i></h3>
+            <p>{{car.description}}</p>
+           </div>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- title -->
+<div class="small-container">
+    <div class="row row-2">
+        <h2>New arrivals</h2>
+        <a href=""><p>view more</p></a>
+    </div>
+</div>
+<!-- Products -->
+<div class="small-container">
+    <div class="row">
+        <div class="col-4">
+            <img src="{% static 'images/car5.jpg'%}">
+            <h4>Nissan Micra</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Rs.1200/day</p>
+        </div>
+        <div class="col-4">
+            <img src="{% static 'images/car11.jpg'%}">
+            <h4>Grand i10 NIOS</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Rs.1200/day</p>
+        </div>
+        <div class="col-4">
+            <img src="{% static 'images/car9.jpg'%}">
+            <h4>Kia Seltos</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Rs.2000/day</p>
+        </div>
+        <div class="col-4">
+            <img src="{% static 'images/car4.jpg'%}">
+            <h4>Hyundai i10</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Rs.1000/day</p>
+        </div>
+    </div>
+</div>

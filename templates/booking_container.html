@@ -1,0 +1,28 @@
+{% load static %}
+{% load getstatus %}
+<div class="small-container cart-page">
+    {% if bookings  %}
+    <table>
+        <tbody>
+        <tr>
+            <th>Booking ID</th>
+            <th>Date</th>
+            <th>Rent price</th>
+            <th>Status</th>
+
+        </tr>
+        {% for booking in bookings %}
+        <tr>
+            <td>{{booking.id}}</td> 
+            <td>{{booking.created_at}}</td>
+            <td>{{booking.total_price}}</td>
+            <td>{% getstatus booking.booking_status %}</td>
+        </tr>
+        
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>no bookings yet!</p>
+    {% endif %}
+</div>

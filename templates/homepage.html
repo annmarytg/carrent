@@ -1,0 +1,111 @@
+{% load static %}
+{% block content %}
+<!-- Feadtued Categories -->
+<div class="small-container">
+<h2 class="title">about us</h2>
+                    <h4>Your trip<span>Your way!</span></h4>
+                    <p>Car rental services are a convenient way to get around without using your vehicle or resorting to public transport. With a car rental, you can explore a city, take a much-needed road trip and make spontaneous getaways possible. Gone are the days when owning a car was a necessity.
+                        Today, choosing a car hire gives you all the mobility and privacy you need, without digging deep into your pockets.</p>
+                    <br><button type="button" class="button">Go</button></a>
+                </div>
+
+<!-- Featured Products -->
+
+<div class="small-container">
+    <h2 class="title">Featured Cars</h2>
+    <div class="row">
+        {% for car in featured_cars %}
+        <div class="col-4">
+            <a href="{% url 'detail_car' car.id %}" >
+            <img src="{{ car.image.url }}"></a>
+            <h4>{{ car.title }}</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Rs.{{ car.price }}/day</p>
+        </div>
+    {% endfor %}
+    </div>
+    <h2 class="title">Latest Cars</h2>
+    <div class="row">
+        {% for car in latest_cars %}
+        <div class="col-4">
+            <a href="{% url 'detail_car' car.id %}" >
+            <img src="{{ car.image.url }}"></a>
+            <h4>{{ car.title }}</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>Rs.{{ car.price }}/day</p>
+        </div>
+        
+       {%endfor%}
+    
+    
+    {% endblock content %}
+    <div class="small-container">
+    
+        <div class="title">
+            <h2>our services</h2>
+        </div>
+        <div class="box">
+            <div class="card">
+                <i class="fa fa-bars"></i>
+                <h2>why you hire us</h2>
+                <div class="pra">
+                    <p>Affordable prices and
+                    Helpful customer care</p>
+                    <p style="text-align: center;">
+                        <a class="button" href='#'>read more</a>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fa fa-user"></i>
+                <h2>Reviews</h2>
+                <div class="pra">
+                    <p>Clean cars. Flexible bookings. Socially distant rental counters.</p>
+                    <p style="text-align: center;">
+                        <a class="button" href='#'>read more</a>
+                    </p>
+                </div>
+        </div>
+    
+    
+    <div class="card">
+        <i class="fa fa-bell"></i>
+        <h2>subscribe</h2>
+        <div class="pra">
+            <p>Receive Exclusive Offers and Promotions</p>
+            <p style="text-align: center;">
+                <a class="button" href='#'>read more</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+    <div class="contactus">
+        <h2 class="title">contact us</h2>
+        <p>supports@carrental.in</p>
+        <div class="newsletter">
+            <form>
+                
+                    <input type="email" name="email"placeholder="Enter your email" autocomplete="email">
+                    <input type="submit" name="submit" value="subscribe">
+                
+            </form>
+        </div>
+        <a class="button-two"href="#">Get in touch</a></a>
+    
+    
+    </div>
+</div>
+</div>
